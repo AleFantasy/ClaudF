@@ -1,0 +1,30 @@
+# Ignore environment files containing secrets
+.env
+.env.*
+! .env.example   # keep template if needed
+
+# Ignore caches and temporary directories
+cache/
+downloads/
+shell-snapshots/
+session-env/
+backups/
+plugins/
+file-history/
+.history/
+.shell-snapshots/
+
+# Ignore logs and history files that can grow large
+history.jsonl
+.last-cleanup
+
+# Ignore OS-specific files
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.temp
+
+# Ignore any .bak or backup files not in backups directory
+*.bak
+*~
