@@ -1,1 +1,2 @@
 - [Language preference: Russian](language-preference-russian.md) — User prefers responses in Russian
+- [Session log: 2026-06-13](session-log-2026-06-13.md) — Log of actions taken on 2026-06-13 to setup git repo for Claude configuration, symlink to free-claude-code, .gitignore, backup hook, and push to GitHub
