@@ -1,0 +1,2 @@
+- [windows-10-setting](memory/windows-10-setting.md) — Indicates that we are working on Windows 10 and scripts should be Windows-compatible.
+- [lang-preference](memory/lang-preference.md) — User prefers responses primarily in Russian, with English allowed for technical terms or code.
