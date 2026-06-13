@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# pre-push hook to backup .env to dated folder
+
+# Base backup directory (as requested)
+BACKUP_BASE="F:/bakcup cl/updatebackup"
+
+# Ensure base directory exists
+mkdir -p "$BACKUP_BASE"
+
+# Create dated subfolder (YYYY-MM-DD)
+DATE_SUBDIR=$(date +"%Y-%m-%d")
+BACKUP_DIR="$BACKUP_BASE/$DATE_SUBDIR"
+mkdir -p "$BACKUP_DIR"
+
+# Source .env file (relative to repo root)
+SOURCE_ENV=".env"
+
+if [ -f "$SOURCE_ENV" ]; then
+    cp "$SOURCE_ENV" "$BACKUP_DIR/"
+    echo "Backup: .env copied to $BACKUP_DIR"
+else
+    echo "Warning: $SOURCE_ENV not found, skipping backup"
+fi
+
+# Allow push to continue
+exit 0
